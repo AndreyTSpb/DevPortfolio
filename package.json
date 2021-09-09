@@ -1,0 +1,34 @@
+{
+  "name": "bicycle-theme",
+  "version": "1.0.0",
+  "description": "html template bicycle-theme",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/AndreyTSpb/bicycle-theme.git"
+  },
+  "author": "tynyanyi@mail.ru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreyTSpb/bicycle-theme/issues"
+  },
+  "homepage": "https://github.com/AndreyTSpb/bicycle-theme#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.4",
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.39.0"
+  }
+}

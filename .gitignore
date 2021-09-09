@@ -35,6 +35,6 @@ node_modules
 test.xunit
 
 #GULP
-package-lock.json
-package.json
-gulpfile.js
+# package-lock.json
+# package.json
+# gulpfile.js
