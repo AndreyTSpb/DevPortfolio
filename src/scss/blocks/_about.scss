@@ -1,0 +1,39 @@
+.about{
+    padding: 115px 65px;
+    h1{
+        width: 120px;
+        font-size: 43.2px;
+        border-bottom: 4px solid #df358d;
+    }
+    h2{
+        margin-top: 115px;
+        font-size: 85px;
+        span{
+            font-size: 95px;
+            color: #df358d;
+        }
+    }
+    h3{
+        font-size: 43.2px;
+        line-height: 57px;
+        font-weight: 400;
+        color: #ff68b6;
+    }
+    &__text{
+        margin-top: 50px;
+        max-width: 550px;
+        /* Text styles for "Currently curating designs for new'startups and founders. Also love 'to code in " */
+        opacity: 0.58;
+        font-family: 'Proxima Nova T';
+        font-size: 36px;
+        line-height: 57px;
+        font-weight: 100;
+        color: #ffffff;
+        /* Text styles for "Laravel" AND "Ruby"*/
+        span{
+            font-family: 'Proxima Nova';
+            font-weight: 400;
+            color: #5d96ff;
+        }
+    }
+}

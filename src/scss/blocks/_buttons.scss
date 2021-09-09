@@ -1,0 +1,12 @@
+.btn{
+    width: 210px;
+    height: 70px;
+    background-color: #ff4ba8;
+    &__sub{
+        //Blend mode: lighten;
+        width: 236px;
+        height: 71px;
+        opacity: 0.05;
+        background-color: #ffffff;
+    }
+}
