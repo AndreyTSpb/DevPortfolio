@@ -1,39 +1,95 @@
 .about{
-    padding: 115px 65px;
-    h1{
-        width: 120px;
-        font-size: 43.2px;
-        border-bottom: 4px solid #df358d;
+    &:before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        background-image: url('../img/avatar_194.png');
+        background-repeat: no-repeat;
+        background-size: 35%;
+        background-position: bottom right;
+        //opacity: 0.4;
+        z-index: -1;
     }
+
     h2{
-        margin-top: 115px;
+        margin-top: 60px;
         font-size: 85px;
         span{
             font-size: 95px;
             color: #df358d;
         }
     }
+    
     h3{
         font-size: 43.2px;
         line-height: 57px;
         font-weight: 400;
         color: #ff68b6;
     }
+    
     &__text{
         margin-top: 50px;
         max-width: 550px;
         /* Text styles for "Currently curating designs for new'startups and founders. Also love 'to code in " */
         opacity: 0.58;
-        font-family: 'Proxima Nova T';
+        font-family: 'Proxima Nova Cn Lt';
         font-size: 36px;
         line-height: 57px;
         font-weight: 100;
         color: #ffffff;
         /* Text styles for "Laravel" AND "Ruby"*/
         span{
-            font-family: 'Proxima Nova';
+            font-family: 'Proxima Nova Rg';
             font-weight: 400;
             color: #5d96ff;
+        }
+    }
+    
+    &__btns{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 25px;
+    }
+    
+    &__clients{
+        margin-top: 25px;
+        display: flex;
+        justify-content: flex-start;
+        align-items:center;
+        gap: 1rem;
+        p{
+            font-family: 'Proxima Nova Cn Lt';
+            font-size: 19.2px;
+            line-height: 1.2;
+            font-weight: 100;
+            letter-spacing: 0.03em;
+            color: #ff4ba8;
+        }
+    }
+    
+    &__footer{
+        margin-top: 25px;
+        padding-left: 35px;
+        padding-top: 15px;
+        background-image: url('../img/q_185.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: 0;
+        top: 0;
+
+        p{
+            opacity: 0.2;
+            font-family: 'Proxima Nova Cn Lt';
+            font-size: 35.8px;
+            line-height: 1.2;
+            font-weight: 300;
+            letter-spacing: 0.03em;
+            color: #ffffff;
         }
     }
 }

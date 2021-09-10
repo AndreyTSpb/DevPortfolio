@@ -52,7 +52,7 @@ ol[class] {
  
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  //text-decoration-skip-ink: auto;
 }
  
 /* Упрощаем работу с изображениями */
@@ -81,14 +81,14 @@ select {
 }
 
 a:not([class]) {
-    text-decoration-skip-ink: auto;
+    //text-decoration-skip-ink: auto;
 }
 
 .right-part-body{
-    background-color: rgba(11,17,36,0.6);
+    background-color: rgba(11,17,36,0.8);
 }
 .menu-part-body{
-    background-color: rgba(10,17,42,0.7);
+    background-color: rgba(10,17,42,0.9);
 }
 nav{
     width: 325px;
@@ -104,6 +104,25 @@ main{
 .no-dot-li{
     list-style: none;
 }
+
+section{
+  display: none;
+  position: relative;
+  padding: 70px 65px;
+  h1{
+    display: inline;
+    //width: 120px;
+    font-size: 43.2px;
+    border-bottom: 4px solid #df358d;
+  }
+  &.show{
+    display: block;
+  }
+}
+
+@import 'blocks/fonts';
+@import 'blocks/buttons';
 @import 'blocks/text';
-@import 'blocks/_menu.scss';
+@import 'blocks/_menu';
 @import 'blocks/about';
+@import 'blocks/work';

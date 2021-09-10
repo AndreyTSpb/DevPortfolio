@@ -40,12 +40,14 @@ let path = {
         css: project_folder + "/css/",
         js: project_folder + "/js/",
         img: project_folder + "/img/",
+        fonts: project_folder + "/fonts/"
     },
     src: {
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
         css: source_folder + "/scss/style.scss",
         js: source_folder + "/js/script.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,ico,webp,gif}",
+        fonts: source_folder + "/fonts/*.{ttf,eot,woff}"
     },
     watch: {
         html: source_folder + "/**/*.html",
@@ -138,9 +140,15 @@ function css(){
  * ПЕренос картинок ( без сжатий ) и перенос в папку dist
  * @returns 
  */
- function img() {
+function img() {
     return src(path.src.img)
         .pipe(dest(path.build.img))
+        .pipe(browsersync.stream());
+}
+
+function fonts() {
+    return src(path.src.fonts)
+        .pipe(dest(path.build.fonts))
         .pipe(browsersync.stream());
 }
 
@@ -163,13 +171,14 @@ function cleanDist(params){
     return del(path.clean);
 }
 
-let build = gulp.series(cleanDist, gulp.parallel(css, js, html, img));
+let build = gulp.series(cleanDist, gulp.parallel(css, js, html, img, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
-exports.css  = css;
-exports.js   = js;
-exports.html = html;
-exports.img  = img;
+exports.css   = css;
+exports.js    = js;
+exports.html  = html;
+exports.img   = img;
+exports.fonts = fonts;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

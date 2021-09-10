@@ -1,12 +1,30 @@
 .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //display: block;
     width: 210px;
     height: 70px;
     background-color: #ff4ba8;
-    &__sub{
-        //Blend mode: lighten;
-        width: 236px;
-        height: 71px;
-        opacity: 0.05;
-        background-color: #ffffff;
+    border: 1px solid #ff4ba8;
+    font-family: 'Proxima Nova Cn Rg';
+    font-size: 28.8px;
+    line-height: 1.2;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    text-decoration: none;
+
+    &.sub{
+        border: 1px solid #ffffff;
+        background-color: rgba($color: #FFFFFF, $alpha: 0.2);
+        &:hover{
+            background-color: #ffffff;
+        }
+    }
+    &:hover{
+        background-color: rgba($color: #FFFFFF, $alpha: 0.2);
+        color: #ff4ba8;
+        cursor: pointer;
     }
 }

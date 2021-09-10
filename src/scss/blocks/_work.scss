@@ -1,0 +1,91 @@
+.work{
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 35px;
+        gap: 20px;
+        .item{
+            width: 320px;
+            overflow: hidden;
+            position: relative;
+            .preview{
+                position: relative;
+                img{
+                    margin: 0 auto;
+                    width: 312px;
+                    height: 234px;
+                    object-fit: cover;
+                }
+                .text{
+                    width: 312px;
+                    margin: 0 auto;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    font-family: 'Proxima Nova Rg';
+                    font-size: 26.4px;
+                    line-height: 1.2;
+                    font-weight: 300;
+                    color: #ffffff;
+                }
+            }
+            &:hover{
+                .desc{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+            .desc{
+                position: absolute;
+                display: none;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.9);
+                gap: 10px;
+
+                .git-link,.view-link{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                    a{
+                        font-family: 'Proxima Nova Th';
+                        font-size: 16px;
+                        line-height: 1.2;
+                        font-weight: 300;
+                        letter-spacing: 0.03em;
+                        color: #ffffff;
+                        text-decoration: none;
+                        &:hover{
+                            color: #f0f0f0;
+                            font-family: 'Proxima Nova Rg';
+                        }
+                    }
+                }
+
+                .icons{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 10px;
+                    padding: 10px;
+                    width: 100%;
+                    height: 20%;
+                    color: #ffffff;
+                    //margin-top: auto;
+                    padding-top: 20px;
+                    i{
+                        display: block;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
