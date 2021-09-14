@@ -1,0 +1,32 @@
+.contact{
+    &__wrapper{
+        margin-top: 20px;
+    }
+    .form__block:last-child{
+        justify-content: flex-start;
+        gap: 50px;
+    }
+    .social-icons{
+        margin: 0;
+        .icon {
+            width: 61px;
+            height: 45px;
+            &.be{
+                background-size: cover;
+                background-position: 0 0px; /* по умолчанию */
+            }
+            &.ball{
+                background-size: cover;
+                background-position: -83px 0px; /* по умолчанию */
+            }
+            &.twit{
+                background-size: cover;
+                background-position: -162px 0px; /* по умолчанию */
+            }
+            &.git{
+                background-size: cover;
+                background-position: -245px 0px; /* по умолчанию */
+            }
+        }
+    }
+}

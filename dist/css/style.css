@@ -471,11 +471,12 @@ section.show {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 210px;
+  min-width: 210px;
   height: 70px;
+  padding: 10px 25px;
   background-color: #ff4ba8;
   border: 1px solid #ff4ba8;
-  font-family: "Proxima Nova Cn Rg";
+  font-family: "Proxima Nova Th";
   font-size: 28.8px;
   line-height: 1.2;
   font-weight: 300;
@@ -496,6 +497,54 @@ section.show {
 .btn:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: #ff4ba8;
+  cursor: pointer;
+}
+
+.social-icons {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.social-icons .icon {
+  display: block;
+  width: 33px;
+  height: 30px;
+  float: left;
+  background: url("../img/social_icon_113.png") no-repeat;
+  opacity: 0.5;
+}
+
+.social-icons .icon:hover {
+  opacity: 1;
+}
+
+.social-icons .icon.be {
+  background-position: 0 0px;
+  /* по умолчанию */
+  cursor: pointer;
+}
+
+.social-icons .icon.ball {
+  background-position: -45px 0px;
+  /* по умолчанию */
+  cursor: pointer;
+}
+
+.social-icons .icon.twit {
+  background-position: -90px 0px;
+  /* по умолчанию */
+  cursor: pointer;
+}
+
+.social-icons .icon.git {
+  background-position: -135px 0px;
+  /* по умолчанию */
   cursor: pointer;
 }
 
@@ -602,54 +651,6 @@ p {
   line-height: 1.2;
   font-weight: 300;
   color: #ffffff;
-}
-
-.menu__wrapper .social-icons {
-  margin-top: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-}
-
-.menu__wrapper .social-icons .icon {
-  display: block;
-  width: 33px;
-  height: 30px;
-  float: left;
-  background: url("../img/social_icon_113.png") no-repeat;
-  opacity: 0.5;
-}
-
-.menu__wrapper .social-icons .icon:hover {
-  opacity: 1;
-}
-
-.menu__wrapper .social-icons .icon.be {
-  background-position: 0 0px;
-  /* по умолчанию */
-  cursor: pointer;
-}
-
-.menu__wrapper .social-icons .icon.ball {
-  background-position: -45px 0px;
-  /* по умолчанию */
-  cursor: pointer;
-}
-
-.menu__wrapper .social-icons .icon.twit {
-  background-position: -90px 0px;
-  /* по умолчанию */
-  cursor: pointer;
-}
-
-.menu__wrapper .social-icons .icon.git {
-  background-position: -135px 0px;
-  /* по умолчанию */
-  cursor: pointer;
 }
 
 .about:before {
@@ -954,6 +955,157 @@ p {
   color: #ff4ba8;
 }
 
+.contact__wrapper {
+  margin-top: 20px;
+}
+
+.contact .form__block:last-child {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 50px;
+}
+
+.contact .social-icons {
+  margin: 0;
+}
+
+.contact .social-icons .icon {
+  width: 61px;
+  height: 45px;
+}
+
+.contact .social-icons .icon.be {
+  background-size: cover;
+  background-position: 0 0px;
+  /* по умолчанию */
+}
+
+.contact .social-icons .icon.ball {
+  background-size: cover;
+  background-position: -83px 0px;
+  /* по умолчанию */
+}
+
+.contact .social-icons .icon.twit {
+  background-size: cover;
+  background-position: -162px 0px;
+  /* по умолчанию */
+}
+
+.contact .social-icons .icon.git {
+  background-size: cover;
+  background-position: -245px 0px;
+  /* по умолчанию */
+}
+
+.form {
+  width: 50%;
+}
+
+.form__legend {
+  margin-top: 20px;
+  font-family: "Proxima Nova Th";
+  font-size: 36.1px;
+  line-height: 57px;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+.form__block {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+}
+
+.form__block input:not([type=submit]) {
+  width: 100%;
+}
+
+.form__textarea {
+  width: 100%;
+  height: 230px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 0.5px solid #ffffff;
+  font-family: "Proxima Nova Th";
+  font-size: 28.9px;
+  line-height: 57px;
+  font-weight: 100;
+  color: #ffffff;
+  padding: 20px 30px;
+}
+
+.form__textarea::-webkit-input-placeholder {
+  opacity: 0.32;
+}
+
+.form__textarea::-moz-placeholder {
+  opacity: 0.32;
+}
+
+.form__textarea:-ms-input-placeholder {
+  opacity: 0.32;
+}
+
+.form__textarea::-ms-input-placeholder {
+  opacity: 0.32;
+}
+
+.form__textarea::placeholder {
+  opacity: 0.32;
+}
+
+.form__input {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 0.5px solid #ffffff;
+  font-family: "Proxima Nova Th";
+  font-size: 28.9px;
+  line-height: 57px;
+  font-weight: 100;
+  color: #ffffff;
+  padding: 10px 25px;
+}
+
+.form__input::-webkit-input-placeholder {
+  opacity: 0.32;
+}
+
+.form__input::-moz-placeholder {
+  opacity: 0.32;
+}
+
+.form__input:-ms-input-placeholder {
+  opacity: 0.32;
+}
+
+.form__input::-ms-input-placeholder {
+  opacity: 0.32;
+}
+
+.form__input::placeholder {
+  opacity: 0.32;
+}
+
+@media screen and (max-width: 1600px) {
+  .form {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .form {
+    width: 80%;
+  }
+}
+
 @media screen and (max-width: 1281px) {
   section {
     padding: 70px 10px;
@@ -965,6 +1117,10 @@ p {
 
   .labs__items {
     gap: 15px;
+  }
+
+  .form {
+    width: 100%;
   }
 }
 
