@@ -31,14 +31,16 @@ dd {
  
 /* Выставляем основные настройки по-умолчанию для body */
 body {
-  min-height: 100vh;
+  height: 100%;
+  //min-height: 100vh;
+  //max-height: 100%;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background-color: #16171b;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   background-image: url('../img/clip_171.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,14 +87,14 @@ a:not([class]) {
 }
 
 .right-part-body{
-    background-color: rgba(11,17,36,0.8);
+    background-color: rgba(11,17,36,0.83);
 }
-.menu-part-body{
-    background-color: rgba(10,17,42,0.9);
-}
+
 nav{
     width: 325px;
-    min-height: 100vh;
+    background-color: rgba(10,17,42,0.87);
+    position: relative;
+    //height: 100%;
 }
 main{
     width: 100%;
@@ -109,6 +111,11 @@ section{
   display: none;
   position: relative;
   padding: 70px 65px;
+  
+  @media screen and (max-width: 1281px) {
+    padding: 70px 10px;
+  }
+
   h1{
     display: inline;
     //width: 120px;
@@ -126,3 +133,4 @@ section{
 @import 'blocks/_menu';
 @import 'blocks/about';
 @import 'blocks/work';
+@import 'blocks/labs';

@@ -5,6 +5,9 @@
         align-items: center;
         margin-top: 35px;
         gap: 20px;
+        @media screen and (max-width: 1281px) {
+            gap: 10px;
+        }
         .item{
             width: 320px;
             overflow: hidden;

@@ -1,0 +1,58 @@
+.labs{
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 35px;
+        gap: 20px;
+        @media screen and (max-width: 1281px) {
+            gap: 15px;
+        }
+
+        .item{
+            width: 478px;
+            height: 549px;
+            background-color: #1e1a34;
+
+            img{
+                width: 478px;
+                height: 361px;
+            }
+
+            .desc{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px 15px;
+                p{
+                    opacity: 0.18;
+                    font-family: 'Proxima Nova Th';
+                    font-size: 19.2px;
+                    line-height: 26px;
+                    font-weight: 300;
+                    letter-spacing: 0.03em;
+                    color: #ffffff;
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    font-family: 'Proxima Nova Rg';
+                    font-size: 14.4px;
+                    line-height: 28px;
+                    font-weight: 300;
+                    letter-spacing: 0.03em;
+                    color: #ff4ba8;
+                    text-decoration: none;
+                    margin-top: 0 auto;
+                    i{
+                        font-weight: 400;
+                        color: #ff4ba8;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

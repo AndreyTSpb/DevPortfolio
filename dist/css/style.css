@@ -38,7 +38,7 @@ dd {
 /* Выставляем основные настройки по-умолчанию для body */
 
 body {
-  min-height: 100vh;
+  height: 100%;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -49,9 +49,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   background-image: url("../img/clip_171.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,16 +85,13 @@ select {
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 
 .right-part-body {
-  background-color: rgba(11, 17, 36, 0.8);
-}
-
-.menu-part-body {
-  background-color: rgba(10, 17, 42, 0.9);
+  background-color: rgba(11, 17, 36, 0.83);
 }
 
 nav {
   width: 325px;
-  min-height: 100vh;
+  background-color: rgba(10, 17, 42, 0.87);
+  position: relative;
 }
 
 main {
@@ -530,22 +527,32 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 25px 0px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.menu img {
+.menu__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  justify-items: center;
+  padding: 25px 0px 10px 0px;
+  height: 100vh;
+}
+
+.menu__wrapper img {
   width: 147px;
   height: 148px;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
-.menu ul {
+.menu__wrapper ul {
   width: 100%;
-  height: 100%;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -558,7 +565,7 @@ p {
   padding-left: 0px;
 }
 
-.menu ul li {
+.menu__wrapper ul li {
   height: 65px;
   padding-left: 70px;
   display: -webkit-box;
@@ -570,16 +577,16 @@ p {
   position: relative;
 }
 
-.menu ul li:hover {
+.menu__wrapper ul li:hover {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.03);
 }
 
-.menu ul li.active a {
+.menu__wrapper ul li.active a {
   color: #ff4ba8;
 }
 
-.menu ul li.active a:before {
+.menu__wrapper ul li.active a:before {
   content: "";
   width: 12px;
   height: 65px;
@@ -589,7 +596,7 @@ p {
   left: 0;
 }
 
-.menu ul li a {
+.menu__wrapper ul li a {
   font-family: "Proxima Nova Rg";
   font-size: 32.4px;
   line-height: 1.2;
@@ -597,7 +604,8 @@ p {
   color: #ffffff;
 }
 
-.menu__social-icons {
+.menu__wrapper .social-icons {
+  margin-top: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -607,7 +615,7 @@ p {
   gap: 1rem;
 }
 
-.menu__social-icons .icon {
+.menu__wrapper .social-icons .icon {
   display: block;
   width: 33px;
   height: 30px;
@@ -616,29 +624,29 @@ p {
   opacity: 0.5;
 }
 
-.menu__social-icons .icon:hover {
+.menu__wrapper .social-icons .icon:hover {
   opacity: 1;
 }
 
-.menu__social-icons .icon.be {
+.menu__wrapper .social-icons .icon.be {
   background-position: 0 0px;
   /* по умолчанию */
   cursor: pointer;
 }
 
-.menu__social-icons .icon.ball {
+.menu__wrapper .social-icons .icon.ball {
   background-position: -45px 0px;
   /* по умолчанию */
   cursor: pointer;
 }
 
-.menu__social-icons .icon.twit {
+.menu__wrapper .social-icons .icon.twit {
   background-position: -90px 0px;
   /* по умолчанию */
   cursor: pointer;
 }
 
-.menu__social-icons .icon.git {
+.menu__wrapper .social-icons .icon.git {
   background-position: -135px 0px;
   /* по умолчанию */
   cursor: pointer;
@@ -872,6 +880,92 @@ p {
 .work__items .item .desc .icons i {
   display: block;
   font-size: 24px;
+}
+
+.labs__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 35px;
+  gap: 20px;
+}
+
+.labs__items .item {
+  width: 478px;
+  height: 549px;
+  background-color: #1e1a34;
+}
+
+.labs__items .item img {
+  width: 478px;
+  height: 361px;
+}
+
+.labs__items .item .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  padding: 20px 15px;
+}
+
+.labs__items .item .desc p {
+  opacity: 0.18;
+  font-family: "Proxima Nova Th";
+  font-size: 19.2px;
+  line-height: 26px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.labs__items .item .desc a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  font-family: "Proxima Nova Rg";
+  font-size: 14.4px;
+  line-height: 28px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: #ff4ba8;
+  text-decoration: none;
+  margin-top: 0 auto;
+}
+
+.labs__items .item .desc a i {
+  font-weight: 400;
+  color: #ff4ba8;
+}
+
+@media screen and (max-width: 1281px) {
+  section {
+    padding: 70px 10px;
+  }
+
+  .work__items {
+    gap: 10px;
+  }
+
+  .labs__items {
+    gap: 15px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
