@@ -42,7 +42,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     };
+    /**
+     * отображвем меню в мобильной версии
+     */
 
+
+    var showMenu = function showMenu() {
+      var menu = document.querySelector('.menu');
+      btn_menu.classList.add('none');
+      menu.classList.add('show');
+    };
+
+    var hideMenu = function hideMenu() {
+      var menu = document.querySelector('.menu');
+      btn_menu.classList.remove('none');
+      menu.classList.remove('show');
+    };
+
+    /**
+     * Переход по вкладкам в меню
+     */
     menu.addEventListener('click', function () {
       var target = event.target;
       var id_block = 'about'; //если щелчек произошел по ссылке
@@ -55,5 +74,16 @@ document.addEventListener('DOMContentLoaded', function () {
       } // если по элементу списка
 
     });
+    var btn_menu = document.querySelector('.btn-menu'),
+        btn_close_menu = document.querySelector('.menu>.btn-close');
+
+    if (btn_menu != null) {
+      btn_menu.addEventListener('click', function () {
+        showMenu();
+      });
+      btn_close_menu.addEventListener('click', function () {
+        hideMenu();
+      });
+    }
   }
 });

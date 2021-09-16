@@ -54,6 +54,7 @@
         align-items: center;
         gap: 1rem;
         margin-top: 25px;
+        flex-wrap: wrap;
     }
     
     &__clients{
@@ -62,6 +63,9 @@
         justify-content: flex-start;
         align-items:center;
         gap: 1rem;
+        @media screen and (max-width: 370px) {
+            gap: 0.5rem;
+        }
         p{
             font-family: 'Proxima Nova Cn Lt';
             font-size: 19.2px;

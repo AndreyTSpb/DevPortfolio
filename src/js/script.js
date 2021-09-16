@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function(){
     let menu = document.querySelector('.menu__links');
     if(menu != null){
+        /**
+         * Переход по вкладкам в меню
+         */
         menu.addEventListener('click', function(){
             let target = event.target;
             let id_block = 'about';
@@ -44,6 +47,35 @@ document.addEventListener('DOMContentLoaded', function(){
                     }
                 }
             }
+        }
+
+        /**
+         * отображвем меню в мобильной версии
+         */
+        let btn_menu = document.querySelector('.btn-menu'),
+            btn_close_menu = document.querySelector('.menu>.btn-close');
+        
+        if(btn_menu != null){
+           
+            btn_menu.addEventListener('click', function(){
+                showMenu();
+            });
+
+            btn_close_menu.addEventListener('click', function(){
+                hideMenu();
+            });
+
+        }
+        function showMenu(){
+            let  menu = document.querySelector('.menu');
+            btn_menu.classList.add('none');
+            menu.classList.add('show');
+        }
+
+        function hideMenu(){
+            let  menu = document.querySelector('.menu');
+            btn_menu.classList.remove('none');
+            menu.classList.remove('show');
         }
 
     }

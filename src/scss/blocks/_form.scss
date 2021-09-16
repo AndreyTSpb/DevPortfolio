@@ -22,6 +22,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (max-width: 650px) {
+            flex-wrap: wrap;
+        }
         gap: 25px;
         input:not([type="submit"]){
             width: 100%;

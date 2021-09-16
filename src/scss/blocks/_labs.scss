@@ -3,7 +3,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
         margin-top: 35px;
         gap: 20px;
         @media screen and (max-width: 1281px) {
@@ -12,12 +12,19 @@
 
         .item{
             width: 478px;
-            height: 549px;
+            //max-height: 549px;
             background-color: #1e1a34;
+            @media screen and (max-width: 478px) {
+                width: 100%;
+            }
 
             img{
                 width: 478px;
                 height: 361px;
+                @media screen and (max-width: 478px) {
+                    width: 100%;
+                    height: auto;
+                }
             }
 
             .desc{

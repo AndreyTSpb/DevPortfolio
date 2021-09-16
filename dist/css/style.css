@@ -548,6 +548,27 @@ section.show {
   cursor: pointer;
 }
 
+.btn-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.btn-close:hover {
+  cursor: pointer;
+}
+
+.btn-menu {
+  position: fixed;
+  right: 15px;
+  top: 5px;
+  font-size: 35px;
+  color: #FFFFFF;
+  display: none;
+}
+
 h1,
 h2,
 h3,
@@ -579,6 +600,11 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+}
+
+.menu .btn-close {
+  display: none;
 }
 
 .menu__wrapper {
@@ -713,6 +739,8 @@ p {
           align-items: center;
   gap: 1rem;
   margin-top: 25px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .about__clients {
@@ -765,6 +793,8 @@ p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -892,16 +922,15 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   margin-top: 35px;
   gap: 20px;
 }
 
 .labs__items .item {
   width: 478px;
-  height: 549px;
   background-color: #1e1a34;
 }
 
@@ -1121,6 +1150,72 @@ p {
 
   .form {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .btn-menu {
+    display: block;
+    z-index: 999;
+  }
+
+  .btn-menu.none {
+    display: none;
+  }
+
+  .menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    height: 100%;
+    /**
+    * Скрываем меню
+    */
+    display: none;
+    /**
+    * показываем меню
+    */
+  }
+
+  .menu .btn-close {
+    display: block;
+  }
+
+  .menu.show {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .form__block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .contact .form__block:last-child {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  .labs__items .item {
+    width: 100%;
+  }
+
+  .labs__items .item img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .about__clients {
+    gap: 0.5rem;
   }
 }
 

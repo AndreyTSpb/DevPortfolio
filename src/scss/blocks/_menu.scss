@@ -2,6 +2,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    .btn-close{
+        display: none;
+
+    }
+    @media screen and (max-width: 1020px) {
+        .btn-close{
+            display: block;
+        }
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9999;
+        height: 100%;
+        /**
+        * Скрываем меню
+        */
+        display: none;
+        /**
+        * показываем меню
+        */
+        &.show{
+            display: block;
+        }
+    }
+    
     &__wrapper{
         display: grid;
         //flex-direction: column;

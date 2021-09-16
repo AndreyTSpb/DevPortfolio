@@ -5,6 +5,9 @@
     .form__block:last-child{
         justify-content: flex-start;
         gap: 50px;
+        @media screen and (max-width: 620px) {
+            justify-content: center;
+          }
     }
     .social-icons{
         margin: 0;
